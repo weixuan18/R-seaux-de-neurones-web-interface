@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Accueil - Traducteur Automatique</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="web-header">
+            <nav class="web-navbar">
+                <div class="container">
+                    <div class="navbar-logo-menu">
+                        <div class="navbar-logo">
+                            <img src="img/logo.png" alt="Logo Traducteur Automatique">
+                            </a>
+                        </div>  
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="technologie.html">Technologie</a></li>
+                            <li><a href="comparaison.html">Comparaison</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="page">
+            <h1>Traducteur automatique</h1>
+            <p>Le traducteur automatique est un outil qui permet de traduire du texte d'une langue à une autre. Il existe plusieurs technologies pour réaliser cette tâche, et plusieurs défis à relever pour obtenir des traductions de qualité.</p>
+        </div>
+        <div class="translate-window">
+            <div class="translate-title">
+                <h1>Traduire du texte</h1>
+            </div>
+            <div class="select-menu">
+                <div class="select">
+                    <span>Sélectionner le traducteur</span>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+                <div class="options-list">
+                    <div class="option" data-translator="libretranslate">LibreTranslate</div>
+                    <div class="option" data-translator="deepl">Deepl</div>
+                </div>          
+            </div>
+            <script src="traducteur.js"></script>
+            <div class="translate-input">
+                <div class="source-language">
+                    <select id="source-language">
+                        <option value="auto">Auto-détection</option>
+                        <option value="fr">Français</option>
+                        <option value="en">Anglais</option>
+                    </select>
+                </div>  
+                <textarea class="source-text" id="source-text" placeholder="Texte à traduire"></textarea>
+                <div class="translated-language">
+                    <select id="translated-language">
+                        <option value="fr">Français</option>
+                        <option value="en">Anglais</option>
+                    </select>
+                </div>   
+                <textarea class="translated-text" id="translated-text" placeholder="Texte traduit"></textarea>
+                <button onclick="translateText()">Traduire</button>
+            </div>
+            <div class="content">
+                <h1>Description du projet</h1>
+                <p>Dans ce projet, nous avons ...</p>
+                <section class="footer">
+                    <article>
+                        <a href="technologie.html">Technologie</a>        
+                    </article>
+                    <article>
+                        <a href="comparaison.html">Comparer les qualités de traduction</a>
+                    </article>
+                </section> 
+            </div>
+        </div>    
+    </body>
+</html>
