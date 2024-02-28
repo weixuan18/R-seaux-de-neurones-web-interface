@@ -12,7 +12,6 @@
                     <div class="navbar-logo-menu">
                         <div class="navbar-logo">
                             <img src="img/logo.png" alt="Logo Traducteur Automatique">
-                            </a>
                         </div>  
                         <ul>
                             <li><a href="index.html">Accueil</a></li>
@@ -25,38 +24,37 @@
         </header>
         <div class="page">
             <h1>Traducteur automatique</h1>
-            <p>Le traducteur automatique est un outil qui permet de traduire du texte d'une langue à une autre. Il existe plusieurs technologies pour réaliser cette tâche, et plusieurs défis à relever pour obtenir des traductions de qualité.</p>
+            <h2>Le traducteur automatique est un outil qui permet de traduire du texte d'une langue à une autre. Il existe plusieurs technologies pour réaliser cette tâche, et plusieurs défis à relever pour obtenir des traductions de qualité.</h2>
+            <h3>Par :
+                <p> CHENG Weixuan, ZHANG Xinhao, Charlottes</p>
+            </h3>
         </div>
         <div class="translate-window">
             <div class="translate-title">
                 <h1>Traduire du texte</h1>
             </div>
             <div class="select-menu">
-                <div class="select">
-                    <span>Sélectionner le traducteur</span>
-                    <i class="fa fa-angle-down"></i>
-                </div>
-                <div class="options-list">
-                    <div class="option" data-translator="libretranslate">LibreTranslate</div>
-                    <div class="option" data-translator="deepl">Deepl</div>
-                </div>          
+                <select id="translator">
+                    <option value="chatgpt">ChatGPT</option>
+                    <option value="deepl">Deepl</option>
+                </select>
             </div>
-            <script src="traducteur.js"></script>
             <div class="translate-input">
                 <div class="source-language">
                     <select id="source-language">
-                        <option value="auto">Auto-détection</option>
+                        <option value="zh">Chinois</option>
                         <option value="fr">Français</option>
                         <option value="en">Anglais</option>
                     </select>
                 </div>  
-                <textarea class="source-text" id="source-text" placeholder="Texte à traduire"></textarea>
                 <div class="translated-language">
                     <select id="translated-language">
                         <option value="fr">Français</option>
                         <option value="en">Anglais</option>
+                        <option value="zh">Chinois</option>
                     </select>
                 </div>   
+                <textarea class="source-text" id="source-text" placeholder="Texte à traduire"></textarea>
                 <textarea class="translated-text" id="translated-text" placeholder="Texte traduit"></textarea>
                 <button onclick="translateText()">Traduire</button>
             </div>
@@ -73,5 +71,7 @@
                 </section> 
             </div>
         </div>    
+        <script src="traducteur.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </body>
 </html>

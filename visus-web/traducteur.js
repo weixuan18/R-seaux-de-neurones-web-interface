@@ -1,6 +1,18 @@
-const select = document.querySelector('.select');
-const options_list = document.querySelector('.options-list');
-const options = document.querySelectorAll('.option');
+// require('dotenv').config();
+// const axios = require('axios');
+
+
+// const express = require('express');
+// const fetch = require('node-fetch'); // Assurez-vous d'installer node-fetch si vous utilisez Node.js 16 ou inférieur
+// const app = express();
+// const port = 3000;
+
+const dotenv = require('dotenv');
+dotenv.config();
+
+const select = document.querySelector('.select-menu');
+const options_list = document.querySelector('select');
+const options = document.querySelectorAll('option');
 const sourceText = document.querySelector('.source-text');
 const targetText = document.querySelector('.translated-text');
 
@@ -26,15 +38,18 @@ async function translateText() {
     let text = document.getElementById('source-text').value; 
     let sourceLanguage = document.getElementById('source-language').value; 
     let targetLanguage = document.getElementById('translated-language').value; 
-    let translator = select.getAttribute('data-selected-translator'); 
+    // let translator = select.getAttribute('option');
+    let translator = document.getElementById('translator').value; 
+
+    // let translator = document.getElementById('translator').value; 
 
     if (text.trim() === '') return; // Ne rien faire si le texte est vide
 
     switch (translator) {
-        case 'LibreTranslate': 
-            await callLibreTranslateAPI(text, sourceLanguage, targetLanguage);
+        case 'chatgpt': 
+            await callChatGPTAPI(text, sourceLanguage, targetLanguage);
             break;
-        case 'DeepL':
+        case 'deepl':
             await callDeepLAPI(text, sourceLanguage, targetLanguage);
             break;
         default:
@@ -42,38 +57,50 @@ async function translateText() {
     }
 }
 
-async function callLibreTranslateAPI(text, sourceLanguage, targetLanguage) {
+
+async function callChatGPTAPI(text, sourceLanguage, targetLanguage) {
+    // const apiKey = process.env.OPENAI_API_KEY; 
+    const apiKey = 'sk-ydqMlMuMQ9bzPEzIJTZZzVrwYNoqRfsyjFi2Z6tDGq67l17V';
+    // const baseURL = process.env.OPENAI_API_BASE_URL;
+    const baseURL = 'https://api.fe8.cn/vi';
+    const prompt = `Translate the following text from ${sourceLanguage} to ${targetLanguage}: ${text}`;
+
     try {
-        const response = await fetch("https://libretranslate.com/translate", {
+        const response = await fetch(`${baseURL}/chat/completions`, {
             method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${apiKey}`
+            },
             body: JSON.stringify({
-                q: text,
-                source: sourceLanguage, 
-                target: targetLanguage,
-                format: "text",
-                api_key: "" // Ajoutez la clé API si nécessaire
-            }),
-            headers: { "Content-Type": "application/json" }
+                model: "gpt-3.5-turbo", 
+                messages :[{role: "system", content: prompt}],
+                temperature: 0.5,
+                max_tokens: 1000
+            })
         });
 
         const data = await response.json();
-        document.getElementById('translated-text').value = data.translatedText;
+        return data.choices[0].message.content; 
     } catch (error) {
-        console.error('Erreur de traduction:', error);
+        console.error('Erreur lors de l’appel à ChatGPT API:', error);
     }
 }
 
+
+
 async function callDeepLAPI(text, sourceLanguage, targetLanguage) {
     try {
-        const response = await fetch("https://api.deepl.com/v2/translate", {
+        const params = new URLSearchParams();
+        params.append("text", text);
+        params.append("source_lang", sourceLanguage.toUpperCase());
+        params.append("target_lang", targetLanguage.toUpperCase());
+        params.append("auth_key", "3b2300ef-5ffd-4bb7-a6a4-6cd0461aac46:fx"); 
+
+        const response = await fetch("https://api-free.deepl.com/v2/translate", {
             method: "POST",
-            body: JSON.stringify({
-                text: text,
-                source_lang: sourceLanguage,
-                target_lang: targetLanguage,
-                auth_key: "" 
-            }),
-            headers: { "Content-Type": "application/json" }
+            body: params,
+            headers: { "Content-Type": "application/x-www-form-urlencoded" }
         });
 
         const data = await response.json();
@@ -82,6 +109,7 @@ async function callDeepLAPI(text, sourceLanguage, targetLanguage) {
         console.error('Erreur de traduction:', error);
     }
 }
+
 
 // function translateText(translator) {
 //     let text = sourceText.value;
