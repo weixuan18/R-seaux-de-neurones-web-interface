@@ -357,18 +357,40 @@ textarea {
     text-align: left;
     font-family: Trevino;
     padding-top : 3%;
-    padding-left: 1%;
-    padding-right : 1%;
+    padding-left: 5%;
+    padding-right : 5%;
     padding-bottom : 6%;
     text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .processus img {
     margin-left : 4.5%;
+    margin-bottom: 6%;
     width: 90%;
     height: 100%;
     object-fit: cover;
     transition: 0.3s;
+}
+
+.processus h2 {
+    color: #e3deda;
+    font-size: 30px;
+    text-align: left;
+    font-family: Trevino;
+    padding-top : 3%;
+    padding-left: 6%;
+    padding-right : 6%;
+    text-transform: uppercase;
+}
+
+.processus p {
+    color: #e3deda;
+    font-size: 18px;
+    text-align: justify;
+    font-family: Trevino;
+    padding-left: 6%;
+    padding-right: 6%;
 }
 
 .head{
