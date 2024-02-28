@@ -452,17 +452,17 @@ textarea {
 }
    
 .description p {
+    padding-bottom: 6%;
     color: #e3deda;
     font-size: 18px;
     text-align: justify;
     font-family: Trevino;
     padding-left: 12%;
     padding-right: 12%;
-    padding-bottom: 6%;
+
 }
 
 .description a{
-    text-decoration: underline;
     color: #e3deda;
     font-size: 16px;
     font-family : 'Trevino';
@@ -479,6 +479,33 @@ textarea {
     font-weight: 700;
     color :#f4f1ef;
     box-shadow: #2c3f56;
+}
+
+.transformer, .tensorflow, .api{
+    background-color: #7d8b9df9;
+    filter : brightness(1.08);
+    border-radius: 20px;
+    border-left : 10px solid #2c3f56;
+    margin-top: 5%;
+    margin-left : 12%;
+    padding:20px;
+    width : 73%;
+}
+
+.transformer h2, .tensorflow h2, .api h2{
+    font-family: Trevino;
+    font-size: 33px;
+    color: #e3deda;
+    margin-left: 11%;
+}
+
+.transformer p, .tensorflow p, .api p{
+    color: #e3deda;
+    font-size: 18px;
+    text-align: justify;
+    font-family: Trevino;
+    padding-left: 12%;
+    padding-right: 12%;
 }
 
 .code {
@@ -519,25 +546,25 @@ textarea {
     cursor: pointer;
     position: relative;
 }
-
 .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 0.3s;
 }
-
 .card:hover img {
     transform: scale(1.1);
 }
-.card .text {
+
+.card a {
+    color : #ebe7e3;
     position: absolute;
     inset : 30px;
     border : 1px solid #e3deda;
     padding: 0 18px;
+    text-decoration: none;
 }
-
-.card .text ::before {
+.card a ::before{
     content: '';
     position: absolute;
     inset : 0;
@@ -548,31 +575,27 @@ textarea {
     transition: 0.2s;
     transition-delay: 0.1s;
 }
-
-.card .text p {
+.card a p{
     margin-bottom: 6px;
     opacity: 0.1;
     transition: 0.4s;
+    text-decoration: none;
 }
-
-.card .text h2 {
+.card a h2{
     margin-bottom: 6px;
     opacity: 1;
     transition: 0.4s;
 }
-
-.card .text h2 {
+.card a h2{
     font-weight: 700;
     text-transform: uppercase;
     transform: translate(20%,0%);
     transition-delay: 0.2s;
-}   
-
-.card .text h2 span {
+}
+.card a h2 span{
     font-weight: 800;
 }
-
-.card .text p {
+.card a p{
     font-weight: 500;
     transform: translate(0,30%);
 }
@@ -580,20 +603,17 @@ textarea {
 .card:hover img {
     opacity: 0.2;
 }
-
-.card:hover .text h2 {
+.card:hover a h2{
     opacity: 1;
     transform: translate(0,0);
     transition-delay: 0.2s;
 }
-
-.card:hover .text p {
+.card:hover a p {
     opacity: 1;
     transform: translate(0,0);
     transition-delay: 0.25s;
 }
-
-.card:hover .text::before {
+.card:hover a::before{
     background-color: #e3deda;
     opacity: 1;
     left: 0;
