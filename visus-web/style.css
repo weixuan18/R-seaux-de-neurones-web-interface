@@ -278,13 +278,13 @@ textarea {
     text-transform: uppercase;
 }
 .content h1{
-    padding-top : 6%;}
+    padding-top : 2%;}
 
 .analyse{
     background-color: #7d8b9df9;
 }
 .analyse h1{
-    padding-top : 15%;
+    padding-top : 3%;
 }
 .content p {
     color: #e3deda;
@@ -373,7 +373,7 @@ textarea {
 }
 
 .processus {
-    margin: 5%;
+    margin: 3%;
 }
 
 .processus h1 {
@@ -381,7 +381,7 @@ textarea {
     font-size: 43px;
     text-align: left;
     font-family: Trevino;
-    padding-top : 3%;
+    padding-top : 4%;
     padding-left: 8%;
     padding-right : 8%;
     padding-bottom : 6%;
@@ -391,7 +391,7 @@ textarea {
 
 .processus img {
     margin-left : 9%;
-    margin-bottom: 6%;
+    margin-bottom: 4%;
     width: 80%;
     height: 100%;
     object-fit: cover;
@@ -400,12 +400,12 @@ textarea {
 
 .processus h2 {
     color: #e3deda;
-    font-size: 30px;
+    font-size: 25px;
     text-align: left;
     font-family: Trevino;
-    padding-top : 3%;
-    padding-left: 12%;
-    padding-right : 12%;
+    padding-top : 1.5%;
+    padding-left: 15%;
+    padding-right : 15%;
     text-transform: uppercase;
 }
 
@@ -414,8 +414,8 @@ textarea {
     font-size: 18px;
     text-align: justify;
     font-family: Trevino;
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .head{
@@ -428,7 +428,7 @@ textarea {
     background-position: center;
     background-color: #6678a9d1;
     background-blend-mode: multiply;
-    margin-top: 19%;
+    margin-top: 16%;
     padding: 0;
 }
 
@@ -479,6 +479,7 @@ textarea {
     font-weight: 700;
     color :#f4f1ef;
     box-shadow: #2c3f56;
+    background-color: #556881f9;
 }
 
 .transformer, .tensorflow, .api{
@@ -618,4 +619,37 @@ textarea {
     opacity: 1;
     left: 0;
     transition-delay: 0.2s;
+}
+
+.sequence {
+    background-color: #364c69f9;
+    border : 1px solid #e3deda;
+    padding-top : 2%;
+    padding-bottom : 2%;
+    padding-left: 12%;
+    padding-right: 12%;
+    margin-top: 8%;
+}
+.sequence h1 {
+    font-family: Trevino;
+    font-size: 22px;
+    color: #e3deda;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom : 3%;
+}
+.sequence h2 {
+    font-family: Trevino;
+    font-size: 19px;
+    color: #988473;
+    text-align: center;
+    text-decoration : underline;
+}
+.sequence p{
+    color: #e0d9d3;
+    font-size: 18px;
+    text-align: center;
+    font-family: Trevino;
+    padding-left: 12%;
+    padding-right: 12%;
 }
