@@ -92,7 +92,7 @@ body {
 .page h2{
     color: #e3deda;
     font-size: 22px;
-    width: 76%;
+    width: 74%;
     text-align: justify;
     font-family: Trevino;
     padding-left: 13%;
@@ -286,16 +286,8 @@ textarea {
 }
 .left-analyse h1, .right-analyse h1{
     padding-top : 6%;
-
 }
 
-.left-analyse{
-
-}
-.right-analyse{
-
-
-}
 .content p {
     color: #e3deda;
     font-size: 21px;
