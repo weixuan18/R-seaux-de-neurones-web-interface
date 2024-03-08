@@ -277,7 +277,7 @@ textarea {
 }
 
 .content h1, .analyse h1{
-    color: #e3deda;
+    color: #d5d0cb;
     font-size: 40px;
     text-align: center;
     font-family: Trevino;
@@ -286,7 +286,7 @@ textarea {
     padding-bottom: 3%;
 }
 .content p {
-    color: #e3deda;
+    color: #d5d0cb;
     font-size: 21px;
     text-align: justify;
     font-family: Trevino;
