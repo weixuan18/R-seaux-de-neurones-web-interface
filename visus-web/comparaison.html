@@ -77,20 +77,25 @@
                 <p>2. Traductions de référence : Collecte des traductions de référence qui sont généralement reconnu par tout le monde.</p>
                 <p>3. Calcul du score BLEU pour chaque traduction en utilisant l'outil .</p>
             </div>
+            <div class="image">
+                <img src="../screen.gif" alt="Les traductions" loop>
+                <p>Démonstration vidéo de l'obtention de traductions via une interface web et FastAPI</p>
+            </div>
         </div>
     </div>
     <div class="final">
         <h1>Comparaison de la Qualité de Traduction</h1>
         <div class="resultat-bleu">
             <h2>Résultats du score BLEU</h2>
-            <p>Les résultats du score BLEU pour chaque traducteur sont les suivants :</p>
+            <p>Phrase 1 : Les résultats du score BLEU pour chaque traducteur sont les suivants :</p>
             <ul>
-                <li>ChatGPT-3.5 : 0.45</li>
-                <li>ChatGPT-4 : 0.52</li>
-                <li>DeepL : 0.60</li>
-                <li>Notre modèle : 0.58</li>
+                <li>Score BLEU ChatGPT-3.5 (Chinois) : 0.6052600461945848</li>
+                <li>Score BLEU ChatGPT-4.0 (Chinois) : 0.678364941096179</li>
+                <li>Score BLEU DeepL (Chinois) : 0.5184341074271375</li>
+                <li>Score BLEU Mon Modèle (Chinois) : 0.650891137493945</li>
             </ul>
-            <p>Sur la base des scores BLEU, nous pouvons conclure que DeepL a obtenu le score le plus élevé, suivi de près par notre modèle de traduction. ChatGPT-4 a obtenu un score intermédiaire, tandis que ChatGPT-3.5 a obtenu le score le plus bas.</p>
+            <p>Sur la base des scores BLEU, nous pouvons conclure que ChatGPT-4 a obtenu le score le plus élevé, suivi de près par notre modèle de traduction. ChatGPT-3.5 a obtenu un score intermédiaire, tandis que DeepL a obtenu le score le plus bas.</p>
+            <img src="img/score_bleu_assemble.png" alt="Résultats du score BLEU">
         </div>
         <section class="footer">
             <article>

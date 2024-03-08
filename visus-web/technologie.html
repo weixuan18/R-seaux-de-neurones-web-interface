@@ -30,19 +30,19 @@
         <div class="card"><img src="img/card3.png" alt="Transformer">
             <a href="#transformer" class="text">
                 <h2>Transformer</h2>
-                <p>Le modèle <span>Transformer</span> est une architecture de réseau de neurones artificiels utilisée dans le domaine du traitement automatique du langage naturel. Il est utilisé dans plusieurs traducteurs automatiques, dont Google Traduction.</p>
+                <p>Le modèle <span>Transformer</span> est une architecture de réseau de neurones artificiels utilisée dans le domaine du traitement automatique des langues.</p>
             </a>
         </div>
-        <div class="card"><img src="img/card2.png" alt="Tensoflow">
-            <a href="#tensorflow" class="text">
-                <h2>Tensorflow</h2>
-                <p>TensorFlow est une <span>bibliothèque</span> logicielle d'apprentissage automatique développée par Google. Elle est utilisée pour entraîner des modèles de traduction automatique, comme le modèle Transformer.</p>
+        <div class="card"><img src="img/card2.png" alt="Pytorch">
+            <a href="#pytorch" class="text">
+                <h2>Pytorch</h2>
+                <p>Pytorch est une <span>bibliothèque</span> logicielle d'apprentissage automatique développée par Google. Elle est utilisée pour entraîner des modèles de traduction automatique, comme le modèle Transformer.</p>
             </a>
         </div>
-        <div class="card"><img src="img/card1.png" alt="APIS">
+        <div class="card"><img src="img/card1.png" alt="FastAPI">
             <a href="#api" class="text">
-                <h2>APIs</h2>
-                <p>Plusieurs traducteurs automatiques utilisent des <span>API</span> pour accéder à des modèles de traduction automatique. Ces API sont souvent fournies par des entreprises spécialisées dans le traitement automatique du langage naturel.</p>
+                <h2>FastAPI</h2>
+                <p>Plusieurs traducteurs automatiques utilisent des <span>API</span> pour accéder à des modèles de traduction automatique à partir de FastAPI.</p>
             </a>
         </div>
     </div>
@@ -60,7 +60,7 @@
             <p>- Actions : Mise en œuvre de techniques de prétraitement telles que la tokenisation, la suppression des stop-words, et la normalisation.</p>
         <h2>Étape 4 : Sélection du Cadre Neuronal</h2>
             <p>- Objectif : Choisir une architecture de modèle d'apprentissage profond adaptée à la tâche de traduction.</p>
-            <p>- Actions : Évaluer différentes architectures (par exemple, RNN, Transformer) et sélectionner la plus appropriée.</p>
+            <p>- Actions : Évaluer différentes architectures et sélectionner la plus appropriée.</p>
         <h2>Étape 5 : Entraînement de l'Encodeur et du Décodeur</h2>
             <p>- Objectif : Entraîner le modèle sur le corpus prétraité pour apprendre à traduire d'une langue à une autre.</p>
             <p>- Actions : Configurer les paramètres d'entraînement, entraîner le modèle et ajuster les hyperparamètres pour optimiser les performances.</p>
@@ -69,7 +69,7 @@
             <p>- Actions : Développer une interface web en HTML/CSS (et potentiellement JavaScript) pour soumettre des textes à traduire et afficher les résultats.</p>
         <h2>Étape 7 : Intégration des APIs de Traducteurs Externes</h2>
             <p>- Objectif : Permettre la comparaison entre le modèle entraîné et d'autres services de traduction.</p>
-            <p>- Actions : Intégrer les APIs de services de traduction externes (Deepl, ChatGPT, LibreTranslate, etc.) dans l'interface web.</p>
+            <p>- Actions : Intégrer les APIs de services de traduction externes (Deepl, ChatGPT3.5, ChatGPT-4) dans l'interface web.</p>
         <h2>Étape 8 : Embellissement de l'HTML</h2>
             <p>- Objectif : Améliorer l'esthétique et l'ergonomie de l'interface web.</p>
             <p>- Actions : Utiliser des frameworks CSS pour styliser l'interface.</p>
@@ -85,20 +85,35 @@
         <p>Le traducteur automatique est un outil qui permet de traduire du texte d'une langue à une autre. Il existe plusieurs technologies pour réaliser cette tâche, et plusieurs défis à relever pour obtenir des traductions de qualité.</p>
         <a href="https://github.com/weixuan18/Reseaux-de-neurones-web-interface.git">Lien GitHub</a>
         <div class="transformer" id="transformer">
-            <h2>Transformer</h2>
-            <p>Nous avons</p>
+            <h2>Transformer - Fairseq</h2>
+            <p>Dans notre projet, nous avons opté pour l'utilisation d'un modèle Transformer de Fairseq, une bibliothèque construite sur PyTorch et spécialisée dans le traitement automatique du langage naturel. Ce choix nous a permis de bénéficier d'une architecture avancée, notamment grâce à l'attention multi-têtes du Transformer, pour traiter efficacement les dépendances textuelles longues et améliorer notre compréhension et génération de langage.</p>
+            <p>Nous avons personnalisé le modèle en le raffinant sur un ensemble de données spécifique, ajustant ainsi les poids pré-entraînés pour qu'ils correspondent mieux à nos objectifs. Ce processus d'affinage a significativement augmenté la performance du modèle sur nos tâches, en adaptant ses capacités à notre contexte particulier et en assurant une haute précision dans les résultats obtenus.</p>
         </div>
-        <div class="tensorflow" id="tensorflow">
-            <h2>TensorFlow</h2>
-            <p>Nous avons</p>
+        <div class="pytorch" id="pytorch">
+            <h2>Pytorch</h2>
+            <p>PyTorch est une bibliothèque de machine learning open source développée par Facebook AI Research (FAIR). Elle est conçue pour faciliter la création et l'entraînement de réseaux de neurones profonds. PyTorch se distingue par sa facilité d'utilisation, sa flexibilité et son approche dynamique de la construction de graphes, ce qui signifie que le graphe de calcul peut être modifié à la volée lors de l'exécution. Cela le rend particulièrement adapté à la recherche et au développement de modèles expérimentaux, où la flexibilité et l'itération rapide sont clés.</p>
+            <p>Nous avons choisi d'adopter PyTorch comme base architecturale pour notre réseau de neurones, profitant de sa flexibilité, de sa facilité d'utilisation, et de sa capacité à manipuler des graphes de calcul dynamiques. Cette décision nous a permis de développer et d'itérer sur notre modèle de manière plus intuitive et efficace, tirant parti de l'approche de PyTorch qui facilite l'expérimentation et le débogage en temps réel. En outre, l'accès à une vaste bibliothèque de modules préconstruits et l'optimisation intégrée pour le calcul GPU ont significativement accéléré le temps d'entraînement de notre réseau, nous permettant de concentrer nos efforts sur l'innovation et l'amélioration de la performance du modèle.</p>
         </div>
         <div class="api" id="api">
-            <h2>APIs</h2>
-            <p>Nous avons</p>
+            <h2>FastAPI</h2>
+            <p>Facile à utiliser pour le développement d'API RESTful en Python, FastAPI nous met à disposition une solution puissante pour interagir avec notre interface web, notamment lors de l'appel à notre modèle de traduction entraîné par Fairseq. Grâce à ses fonctionnalités avancées telles que la gestion efficace des requêtes HTTP, la prise en charge native de l'asynchronisme et la génération automatique de documentation interactive, FastAPI simplifie grandement le processus de communication entre notre interface utilisateur et le modèle de traduction. Cette intégration fluide permet une expérience utilisateur transparente tout en exploitant pleinement les performances et la flexibilité offertes par FastAPI et Fairseq.</p>
         </div>
     </div>
-    <div class="code">
-        <h2>Exemple de Code</h2>
+    <div class="tech-processus">
+        <h1>Processus et développement</h1>
+        <h2>1. Métriques de surveillance</h2>
+        <p>Dans notre tâche d'entraînement d'un traducteur automatique, la fonction de perte (ou "loss") joue un rôle crucial en quantifiant l'écart entre les prédictions du modèle et les traductions correctes attendues. Cette fonction de perte est utilisée pour guider le processus d'optimisation du modèle en fournissant un feedback sur sa performance à chaque étape de l'entraînement.</p>
+        <p>Le processus d'entraînement vise à minimiser cette fonction de perte, ce qui signifie que le modèle est ajusté pour produire des traductions qui se rapprochent le plus possible des traductions de référence. La minimisation de la perte est réalisée à travers un processus itératif où le modèle fait des prédictions, calcule l'erreur de ces prédictions par rapport aux traductions attendues, et ajuste ses paramètres (par exemple, les poids des connexions neuronales) pour réduire cette erreur.</p>
+        <p>Durant la phase d'entraînement de notre système de traduction automatique, nous avons méticuleusement surveillé la fonction de perte (ou "loss") sur différents ensembles de données : entraînement, validation, et test. Cette fonction de perte nous a servi de baromètre pour évaluer l'efficacité de notre modèle à traduire correctement les textes. Lorsque nous observions une augmentation de la perte sur l'ensemble de validation, cela servait d'indicateur que notre modèle commençait à mémoriser spécifiquement les données d'entraînement au lieu de généraliser à partir de celles-ci, un phénomène connu sous le nom de sur-apprentissage. À ce stade critique, nous prenions la décision de cesser l'entraînement pour éviter que le modèle ne perde en capacité de généralisation sur de nouvelles données.</p>
+        <p>Pour une surveillance plus précise et intuitive de l'entraînement de notre modèle de traduction automatique, nous avons intégré TensorBoard dès le début du processus. Cet outil puissant de visualisation nous a permis de suivre en temps réel plusieurs métriques clés, dont la fonction de perte sur nos ensembles d'entraînement, de validation, et de test, ainsi que l'évolution du score BLEU. L'utilisation de TensorBoard a rendu l'identification des tendances de sur-apprentissage particulièrement efficace, en nous fournissant des graphiques détaillés qui illustrent l'évolution de la perte de validation. Ainsi, lorsque nous détectons une augmentation de cette perte, indiquant un début de sur-apprentissage, nous pouvons rapidement intervenir et ajuster notre stratégie d'entraînement pour optimiser les performances du modèle tout en préservant sa capacité à généraliser.</p>
+        <h2>2. Checkpoint sauvegardé</h2>
+        <p>Lors de notre surveillance attentive de l'entraînement, l'utilisation des points de contrôle (checkpoints) s'est avérée cruciale. Nous avons constaté que le score BLEU, un indicateur clé de la qualité de la traduction, cessait de s'améliorer, se stabilisant entre 20 et 30, tandis que la fonction de perte sur l'ensemble de validation commençait à augmenter. Ce phénomène nous a signalé un début de sur-apprentissage, indiquant que le modèle perdait en capacité de généralisation. À ce moment précis, nous avons décidé d'interrompre l'entraînement pour préserver l'efficacité du modèle sur de nouvelles données. Le checkpoint le plus performant à ce stade, que nous avons nommé « checkpoint-best », a été sauvegardé comme notre modèle final. Cette stratégie nous a permis d'optimiser la balance entre apprentissage et généralisation, en nous assurant que le modèle retenu était celui offrant les meilleures performances sur des données inédites.</p>
+        <div class="tech-processus-img">
+            <img src="img/loss.svg" alt="Score-BLEU">
+            <p>Visualisation de la fonction de perte sur l'ensemble du modèle dans TensorBoard</p>
+            <img src="img/best_bleu.svg" alt="Loss">
+            <p>Visualisation du score BLEU sur l'ensemble de test dans TensorBoard</p>
+        </div>
         <section class="footer2">
             <article>
                 <a href="technologie.html">Technologie</a>        

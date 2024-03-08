@@ -576,7 +576,7 @@ textarea {
     background-color: #556881f9;
 }
 
-.transformer, .tensorflow, .api{
+.transformer, .pytorch, .api{
     background-color: #7d8b9df9;
     filter : brightness(1.08);
     border-radius: 20px;
@@ -587,23 +587,24 @@ textarea {
     width : 73%;
 }
 
-.transformer h2, .tensorflow h2, .api h2{
+.transformer h2, .pytorch h2, .api h2{
     font-family: Trevino;
     font-size: 33px;
     color: #d5d0cb;
     margin-left: 11%;
 }
 
-.transformer p, .tensorflow p, .api p{
+.transformer p, .pytorch p, .api p{
     color: #d5d0cb;
     font-size: 20px;
     text-align: justify;
     font-family: Trevino;
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-bottom: 2.5%;
 }
 
-.code {
+.tech-processus {
     background-color: #e3dedab7;
     padding-left: 12%;
     padding-right: 12%;
@@ -611,12 +612,46 @@ textarea {
     padding:20px;
 }
 
-.code h2 {
+.tech-processus h1 {
     font-family: Trevino;
     font-size: 39px;
-    color: #2c3f56;
+    color: #445a77fc;
     margin-left: 11%;
     margin-top : 5%;
+}
+.tech-processus h2 {
+    font-family: Trevino;
+    font-size: 32px;
+    color: #445a77ea;
+    margin-left: 11%;
+    margin-top : 5%;
+    padding-bottom : 3%;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.tech-processus p {
+    color: #445a77ea;
+    font-size: 20px;
+    text-align: justify;
+    font-family: Trevino;
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-bottom: 2.5%;
+}
+
+.tech-processus-img{
+    display: grid;
+    grid-auto-flow : row;
+    grid-template-columns: 1fr 1fr;
+    margin-left : 11%;
+    margin-right : 11%;
+    margin-top : 5%;
+    padding-bottom : 5%;
+}
+.tech-processus-img img{
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 12%;
 }
 
 .techs-card{
@@ -733,11 +768,12 @@ textarea {
     padding-bottom : 3%;
 }
 .sequence h2 {
-    font-family: Trevino;
-    font-size: 19px;
+    font-family: Times;
+    font-size: 22.5px;
     color: #988473;
     text-align: center;
     text-decoration : underline;
+    font-weight: 200px;
 }
 .sequence p{
     color: #e0d9d3;
@@ -746,4 +782,20 @@ textarea {
     font-family: Trevino;
     padding-left: 12%;
     padding-right: 12%;
+}
+
+.image {
+    width : auto ;  
+    max-height : 100px;
+    padding-bottom : 50%;
+}
+.image img{
+    max-width : 95%;
+    max-height : 100%;
+    width : auto;
+    height : auto;
+}
+.image p {
+    text-align : center;
+    color : #20324d;
 }
