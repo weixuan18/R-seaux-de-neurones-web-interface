@@ -1,0 +1,190 @@
+<div id="app">
+<! DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Accueil - Traducteur Automatique</title>
+        <link rel="stylesheet" href="visus-web/style.css">
+    </head>
+
+    <body>
+        <header class="web-header">
+            <nav class="web-navbar">
+                <div class="container">
+                    <div class="navbar-logo-menu">
+                        <div class="navbar-logo">
+                            <img src="visus-web/img/logo.png" alt="Logo Traducteur Automatique">
+                        </div>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="visus-web/technologie.html">Technologie</a></li>
+                            <li><a href="visus-web/comparaison.html">Comparaison</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="page">
+            <h1>Traducteur automatique</h1>
+            <h2>Le traducteur automatique est un outil qui permet de traduire du texte d'une langue à une autre. Il
+                existe plusieurs technologies pour réaliser cette tâche, et plusieurs défis à relever pour obtenir des
+                traductions de qualité.</h2>
+            <h3>Par :
+                <p> CHENG Weixuan, ZHANG Xinhao, Charlottes</p>
+            </h3>
+        </div>
+        <div class="translate-window">
+            <div class="translate-title">
+                <h1>Traduire du texte</h1>
+            </div>
+            <div class="select-menu">
+                <select id="translator" v-model="selectedTranslator">
+                    <option value="chatgpt3_5">ChatGPT3.5</option>
+                    <option value="chatgpt4">ChatGPT4</option>
+                    <option value="deepl">DeepL</option>
+                    <option value="myModel">My Model</option>
+                </select>
+            </div>
+            <div class="translate-input">
+                <div class="source-language">
+                    <select id="source-language" v-model="sourceLang">
+                        <option value="zh">Chinois</option>
+                        <option value="fr">Français</option>
+                        <option value="en">Anglais</option>
+                    </select>
+                </div>
+                <div class="translated-language">
+                    <select id="translated-language" v-model="targetLang">
+                        <option value="fr">Français</option>
+                        <option value="en">Anglais</option>
+                        <option value="zh">Chinois</option>
+                    </select>
+                </div>
+                <textarea class="source-text" id="source-text" placeholder="Texte à traduire"
+                    v-model="sourceText"></textarea>
+                <textarea class="translated-text" id="translated-text" placeholder="Texte traduit"
+                    v-model="targetText"></textarea>
+            </div>
+            <button @click="translateText">Traduire</button>
+            <div class="content">
+                <h1>Description du projet</h1>
+                <p>Dans ce projet, nous avons ...</p>
+                <section class="footer">
+                    <article>
+                        <a href="visus-web/comparaison.html">Comparer les qualités de traduction</a>
+                    </article>
+                    <article>
+                        <a href="visus-web/technologie.html">Technologie</a>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </body>
+    </html>
+</div>
+
+<!-- <script src="visus-web/traducteur.js"></script> -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+
+    const { createApp } = Vue
+
+    createApp({
+        data() {
+            return {
+                sourceText: "",
+                targetText: "",
+                selectedTranslator: "myModel",
+                sourceLang: "fr",
+                targetLang: "zh"
+            }
+        },
+
+        methods: {
+
+            translateText() {
+                console.log(this.sourceLang, this.targetLang, this.selectedTranslator, this.sourceText)
+                if (this.selectedTranslator == 'myModel') {
+                    console.log('myModel')
+                    this.callMyModelAPI()
+                } else if (this.selectedTranslator == 'deepl') {
+                    console.log('deepl')
+                    this.callDeepLAPI()
+                } else if (this.selectedTranslator == 'chatgpt3_5') {
+                    console.log('chatgpt')
+                    this.callChatGPT3_5API()
+                } else if (this.selectedTranslator == 'chatgpt4') {
+                    console.log('chatgpt')
+                    this.callChatGPT4API()
+                }
+            },
+
+            async callMyModelAPI() {
+                try {
+                    const response = await axios.post('http://localhost:8000/translation_mymodel/', {
+                        text: this.sourceText
+                    })
+                    console.log(response.data)
+                    this.targetText = response.data.translated_text
+                } catch (error) {
+                    console.log(error)
+                }
+            },
+
+            async callDeepLAPI() {
+                try {
+                    const response = await axios.post(
+                        "https://api-free.deepl.com/v2/translate",
+                        {
+                            text: this.sourceText,
+                            source_lang: this.sourceLang,
+                            target_lang: this.targetLang,
+                            auth_key: "3b2300ef-5ffd-4bb7-a6a4-6cd0461aac46:fx",
+                        },
+                        {
+                            headers: {
+                                "Content-Type": "application/x-www-form-urlencoded"
+                            }
+                        }
+                    )
+                    console.log(response.data.translations[0].text);
+                    this.targetText = response.data.translations[0].text
+                } catch (error) {
+                    console.log(error);
+                }
+            },
+
+            async callChatGPT3_5API() {
+                try {
+                    const response = await axios.post('http://localhost:8000/chatgpt3_5/', {
+                        text: this.sourceText,
+                        source_lang: this.sourceLang,
+                        target_lang: this.targetLang
+                    })
+                    console.log(response.data)
+                    this.targetText = response.data.translated_text
+                } catch (error) {
+                    console.log(error)
+                }
+            },
+
+            async callChatGPT4API() {
+                try {
+                    const response = await axios.post('http://localhost:8000/chatgpt4/', {
+                        text: this.sourceText,
+                        source_lang: this.sourceLang,
+                        target_lang: this.targetLang
+                    })
+                    console.log(response.data)
+                    this.targetText = response.data.translated_text
+                } catch (error) {
+                    console.log(error)
+                }
+            },
+
+        }
+    }).mount('#app')
+
+
+</script>

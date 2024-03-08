@@ -4,6 +4,16 @@ body {
     background-color: #7d8b9d;
 }
 
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 20px;
+    font-family: 'Trevino';
+    color: #e3deda;
+}
 .web-header {
     position : absolute;
     top : 0;
@@ -254,7 +264,7 @@ button:hover{
 }
 textarea {
     height: 450px;
-    width: 96%;
+    width: 100%;
     background-color: #e3deda;
     font-size : 24px;
     padding: 12px;
