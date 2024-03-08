@@ -37,17 +37,65 @@
             <p> -- The Little Prince</p>
     </div>
     <div class="analyse">
-        <div class="left-analyse">
+        <div class="analyse1">
             <h1>Comparaison des Traducteurs Automatiques</h1>
-            <p></p>
+            <p>Nous avons 4 traducteurs différents : ChatGPT-3.5, ChatGPT-4, DeepL et notre propre modèle de traduction. </p>
+            <ul>1. ChatGPT-3.5 
+                <li><div class="sous-title">Principes et Caractéristiques :
+                    <div class="analyse1-ex">Basé sur le modèle GPT-3.5 d'OpenAI, une version antérieure du modèle de langue GPT. Utilise l'apprentissage profond et le traitement du langage naturel (NLP) pour comprendre et générer du texte.</div></li>
+                <li><div class="sous-title">Avantages : </div>  
+                    <div class="analyse1-ex">Compréhension contextuelle impressionnante du langage grâce à sa large base de données d'entraînement. Capable de générer des réponses cohérentes et pertinentes dans de nombreuses situations.</div></li>
+                <li><div class="sous-title">Inconvénients : </div>
+                    <div class="analyse1-ex">Moins précis ou mis à jour que la version plus récente, ChatGPT-4. Peut générer des réponses inexactes ou non pertinentes, nécessitant une supervision humaine.</div></li>
+            </ul>
+            <ul>2. ChatGPT-4 
+                <li>Principes et Caractéristiques :
+                    <div class="analyse1-ex">Version améliorée de ChatGPT basée sur le modèle GPT-4 d'OpenAI. Inclut des améliorations significatives en termes de compréhension du contexte et de précision.</div></li>
+                <li>Avantages :
+                    <div class="analyse1-ex">Plus précis et contextuellement pertinent que les versions précédentes. Meilleure capacité à comprendre et à générer des traductions dans des contextes complexes.</div></li>
+                <li>Inconvénients : 
+                    <div class="analyse1-ex">Comme tous les modèles basés sur l'IA, peut encore produire des erreurs ou des interprétations incorrectes. La génération de réponse peut être influencée par les biais présents dans les données d'entraînement.</div></li>
+            </ul>
+            <ul>3. DeepL 
+                <li>Principes et Caractéristiques :
+                    <div class="analyse1-ex">Service de traduction automatique basé sur l'apprentissage profond, reconnu pour la qualité supérieure de ses traductions. Utilise une approche basée sur des réseaux neuronaux pour traduire des textes dans plusieurs langues.</div></li>
+                <li>Avantages :
+                    <div class="analyse1-ex">Souvent jugé supérieur à d'autres services de traduction en termes de précision et de naturel du langage. Offre des traductions dans un large éventail de langues avec des options pour affiner le style et le ton.</div></li>
+                <li>Inconvénients : 
+                    <div class="analyse1-ex">Bien que très précis, n'est pas infaillible et peut parfois générer des traductions erronées ou maladroites, en particulier avec des phrases très complexes ou ambiguës. La qualité peut varier selon les paires de langues, certaines étant mieux prises en charge que d'autres.</div>
+            </ul>
         </div>
-        <div class="right-analyse">
+        <div class="analyse2">
             <h1>Comparaison de la Qualité de Traduction</h1>
-            <p></p>
+            <p>Afin d'évaluer et de comparer la qualité des traductions générées par différents traducteurs, j'ai utilisé le score BLEU (Bilingual Evaluation Understudy) qui est une métrique courante utilisée pour évaluer la qualité des textes traduits par rapport à des traductions de référence. </p>
+            <div class="principe-bleu">
+                <h2>La principe du score BLEU</h2>
+                <div class="analyse2-ex">
+                    <p>Le score BLEU est calculé en comparant les n-grammes (séquences de n mots) du texte traduit avec les n-grammes du texte de référence. Plus le score BLEU est élevé, meilleure est la qualité de la traduction.</p>
+                    <img src="img/bleu.png" alt="Score BLEU">
+                </div>
+            </div>
+            <div class="processus-bleu">
+                <h2>Les processus d'évaluation</h2>
+                <p>1. Traduction à évaluer : Collecte des traductions générées par les traducteurs automatiques basé sur les mêmes phrases (nous avons choisi 3 phrases au taotal).</p>
+                <p>2. Traductions de référence : Collecte des traductions de référence qui sont généralement reconnu par tout le monde.</p>
+                <p>3. Calcul du score BLEU pour chaque traduction en utilisant l'outil .</p>
+            </div>
         </div>
     </div>
     <div class="final">
         <h1>Comparaison de la Qualité de Traduction</h1>
+        <div class="resultat-bleu">
+            <h2>Résultats du score BLEU</h2>
+            <p>Les résultats du score BLEU pour chaque traducteur sont les suivants :</p>
+            <ul>
+                <li>ChatGPT-3.5 : 0.45</li>
+                <li>ChatGPT-4 : 0.52</li>
+                <li>DeepL : 0.60</li>
+                <li>Notre modèle : 0.58</li>
+            </ul>
+            <p>Sur la base des scores BLEU, nous pouvons conclure que DeepL a obtenu le score le plus élevé, suivi de près par notre modèle de traduction. ChatGPT-4 a obtenu un score intermédiaire, tandis que ChatGPT-3.5 a obtenu le score le plus bas.</p>
+        </div>
         <section class="footer">
             <article>
                 <a href="../index_vue.html">Accueil</a>        
