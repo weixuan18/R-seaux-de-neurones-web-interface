@@ -408,6 +408,41 @@ textarea {
     background-color: #99a4b3f9;
     box-shadow: 0 10px 28px rgba(33, 43, 43, 0.1);
 }
+.resultat-bleu img{
+    margin-left: 12%;
+    height: auto;
+    max-width: 83%;
+
+}
+.explication-resultat{
+    padding : 2% 12% 2% 12%;
+    text-align: justify;
+    font-size : 20px;
+    font-weight: 400;
+    color : #d5d0cb;
+}
+.explication-resultat h2{
+    font-size: 32px;
+    padding-bottom: 1.5%;
+}
+.explication-resultat p{
+    padding-bottom: 1.5%;
+}
+.explication-qualitative{
+    padding : 4% 12% 2% 12%;
+    text-align: justify;
+    font-size : 20px;
+    font-weight: 400;
+    color : #d5d0cb;
+}
+.explication-qualitative h2{
+    font-size: 32px;
+    padding-bottom: 1.5%;
+}
+.explication-qualitative p{
+    padding-bottom: 1.5%;
+}
+
 .footer, .footer2{
     display: flex;
     flex-wrap: wrap;
@@ -516,13 +551,11 @@ textarea {
     background-image: url(img/code_ordi.jpg);
     filter: brightness(0.85);
     height: 520px;
-    transform: translateY(-130px);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #6678a9d1;
     background-blend-mode: multiply;
-    margin-top: 16%;
     padding: 0;
 }
 
@@ -533,16 +566,58 @@ textarea {
     font-family: Trevino;
     padding-top: 411px;
     padding-left: 12%;
+    margin : 0;
 }
 
+.corpus-entraînement{
+    background-color: #364a63;
+    margin-top: 5%;
+    padding:1% 12% 7% 12%;
+}
+.corpus-entraînement h1 {
+    font-family: Trevino;
+    font-size: 39px;
+    color: #d5d0cb;
+    margin-top : 5%;
+    padding-bottom : 3%;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.corpus-entraînement p {
+    color: #d5d0cb;
+    font-size: 20px;
+    text-align: justify;
+    font-family: Trevino;
+    padding-bottom: 2.5%;
+}
+.corpus-entraînement a{
+    color: #d5d0cb;
+    font-size: 19px;
+    padding: 1% 3% 1% 3%;
+    position : relative;
+    text-decoration: underline;
+    border-radius: 15px;
+    box-shadow: 0 10px 28px rgba(33, 43, 43, 0.1);
+    background-color: #556881f9;
+}
+.corpus-entraînement a:hover{
+    font-size: 19px;
+    font-weight: 700;
+    color :#f4f1ef;
+    box-shadow: #2c3f56;
+    background-color: #62758ff9;
+}
 .description h1{
     margin-left: 12%;
     margin-right: 12%;
     margin-bottom: 3%;
+    padding-top : 3%;
     padding-bottom : 3%;
     font-family: Trevino;
     font-size: 39px;
     color: #cfcac6;
+    text-transform: uppercase;
+    text-decoration: underline;
 }
    
 .description p {
@@ -790,7 +865,7 @@ textarea {
     padding-bottom : 50%;
 }
 .image img{
-    max-width : 95%;
+    max-width : 100%;
     max-height : 100%;
     width : auto;
     height : auto;

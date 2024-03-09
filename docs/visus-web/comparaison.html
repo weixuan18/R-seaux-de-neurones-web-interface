@@ -25,7 +25,7 @@
     </header>
     <div class="sequence">
         <h1>Texte original à examiner</h2>
-            <h2>1. “l’Assemblée générale a adopté par consensus quatre résolutions concernant la sécurité du personnel humanitaire et le renforcement de la coordination de l’aide d’urgence."</h2>
+            <h2>1. “L’Assemblée générale a adopté par consensus quatre résolutions concernant la sécurité du personnel humanitaire et le renforcement de la coordination de l’aide d’urgence."</h2>
             <p>"大会一致通过关于人道主义人员安全和加强紧急援助协调的四项决议。"</p>
             <p> -- SOIXANTE-DIX-HUITIÈME SESSION, 46E & 47E SÉANCES PLÉNIÈRES – MATIN & APRÈS-MIDI</p>
             <h2>2. "Les sociétés norvégiennes qui participent à ce programme ont certifié leurs produits et effectué les premières livraisons."</h2>
@@ -87,15 +87,35 @@
         <h1>Comparaison de la Qualité de Traduction</h1>
         <div class="resultat-bleu">
             <h2>Résultats du score BLEU</h2>
-            <p>Phrase 1 : Les résultats du score BLEU pour chaque traducteur sont les suivants :</p>
+            <p>Phrase 1 : "L’Assemblée générale a adopté par consensus quatre résolutions concernant la sécurité du personnel humanitaire et le renforcement de la coordination de l’aide d’urgence." </p>
+            <p>Les résultats du score BLEU pour chaque traducteur sont les suivants :</p>
             <ul>
                 <li>Score BLEU ChatGPT-3.5 (Chinois) : 0.6052600461945848</li>
                 <li>Score BLEU ChatGPT-4.0 (Chinois) : 0.678364941096179</li>
                 <li>Score BLEU DeepL (Chinois) : 0.5184341074271375</li>
-                <li>Score BLEU Mon Modèle (Chinois) : 0.650891137493945</li>
+                <li>Score BLEU Notre Modèle entraîné (Chinois) : 0.650891137493945</li>
             </ul>
             <p>Sur la base des scores BLEU, nous pouvons conclure que ChatGPT-4 a obtenu le score le plus élevé, suivi de près par notre modèle de traduction. ChatGPT-3.5 a obtenu un score intermédiaire, tandis que DeepL a obtenu le score le plus bas.</p>
             <img src="img/score_bleu_assemble.png" alt="Résultats du score BLEU">
+        </div>
+        <div class="explication-resultat">
+            <h2>Explication des Résultats</h2>
+            <p>1. ChatGPT-4.0 a le score BLEU le plus élevé parmi les modèles évalués. Ceci suggère que les traductions produites par ChatGPT-4.0 sont les plus proches des traductions humaines de référence pour le chinois.</p>
+            <p>2. Le score de notre modèle entraîné est légèrement inférieur à celui de ChatGPT-4.0. Cela signifie que notre modèle montre une performance impressionnante. Il traduit le chinois avec une précision relativement élevée, suggérant que notre modèle a bien appris les particularités de la langue et peut générer des traductions qui sont assez proches des standards humains.</p>
+            <p>3. Comparé à ChatGPT-4, le ChatGPT-3.5 a un score BLEU inférieur, ce qui est attendu compte tenu des améliorations générales et des optimisations apportées dans la version 4.0. Cela montre que, bien que capable de traduire le chinois de manière compétente, ChatGPT-3.5 pourrait être moins précis ou naturel dans ses traductions par rapport à la version plus récente.</p>
+            <p>4. Parmi ces 4 traducteurs évalués, DeepL a le score BLEU le plus bas. Bien que DeepL soit généralement réputé pour ses traductions de haute qualité en plusieurs langues, ce score particulier suggère que pour le chinois, il pourrait ne pas performer aussi bien que les modèles basés sur ChatGPT ou votre modèle personnalisé.</p>
+        </div>
+        <div class="explication-qualitative">
+            <h2>Explication Qualitative (détaillée)</h2>
+            <ul>
+                <li>ChatGPT-3.5 : '大会通过一致通过了四项关于人道主义人员安全和加强紧急援助协调的决议。'</li>
+                <li>ChatGPT-4 : '大会一致通过了四项关于人道主义人员安全和加强紧急援助协调的决议。'</li>
+                <li>DeepL : '大会以协商一致的方式通过了四项关于人道主义人员安全和加强紧急援助协调的决议。'</li>
+                <li>Modèle entraîné: '大会通过了关于人道主义工作人员安全和加强紧急援助协调的四项决议。'</li>
+            </ul>
+            <p>Suite à une analyse détaillée des performances de ces quatre traducteurs pour le chinois, telle qu'évaluée par des locuteurs natifs, nous observons que ChatGPT-4 est particulièrement adapté pour un usage général en chinois. Cependant, ChatGPT-3.5 répète à tort le mot '通过', probablement du fait d'une traduction littérale. En effet, "par consensus" en français est traduit par "一致通过" en chinois, et "a adopté" peut aussi se traduire par "通过", montrant une confusion sémantique.</p>
+            <p>La traduction par DeepL introduit le mot "以", absent du texte original. Bien que "以...的方式" puisse être sémantiquement correct, cet ajout rend la phrase moins fluide et naturelle.</p>
+            <p>La traduction produite par notre modèle est fluide et semble plus naturelle que celle de ChatGPT-4, puisque l'usage courant à l'oral en chinois est de placer les compléments après le nom lorsque les compléments sont longues. Toutefois, une erreur a été commise dans la traduction de "人员" (personnel) par l'ajout inexact de "工作", suggérant un problème de sur-apprentissage.</p>
         </div>
         <section class="footer">
             <article>
