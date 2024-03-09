@@ -165,9 +165,9 @@ body {
 }
 
 .select-menu {
-    width: 76%;
+    width: 78%;
     position : relative;
-    margin-left: 12%;
+    margin-left: 11%;
     margin-bottom: 5px;
 }
 .select-menu select{
@@ -220,12 +220,13 @@ body {
 }
 
 .translate-input {
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 11%;
+    padding-right: 11%;
     padding-top: 0;
     padding-bottom: 4%;
     display : grid;
     grid-template-columns: repeat(2, 1fr);
+    width : 78%;
 }
 
 button{
@@ -264,7 +265,7 @@ button:hover{
 }
 textarea {
     height: 450px;
-    width: 100%;
+    width: 96%;
     background-color: #e3deda;
     font-size : 24px;
     padding: 12px;
@@ -299,6 +300,9 @@ textarea {
 .analyse{
     background-color: #7d8b9df9;
     margin : 8%;
+}
+.analyse1, .analyse2{
+    text-align: justify;
 }
 .analyse1 h1{
     padding-top : 3%;
